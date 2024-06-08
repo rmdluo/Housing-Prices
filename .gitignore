@@ -1,3 +1,7 @@
+# Repo specific
+data/*
+!data/house-prices-advanced-regression-techniques.zip
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
