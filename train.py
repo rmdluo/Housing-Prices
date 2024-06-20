@@ -29,4 +29,4 @@ train_labels = train_data["SalePrice"]
 
 model = xgb.XGBRegressor(tree_method="hist", enable_categorical=True, eval_metric=mean_absolute_error)
 model.fit(train_features, train_labels)
-model.save_model("housing_price.json")
+model.save_model("model/housing_price.json")

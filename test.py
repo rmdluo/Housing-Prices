@@ -23,8 +23,8 @@ for col in test_data.columns:
         test_data[col] = test_data[col].fillna(na_data[na_data['col'] == col]['val'])
 
 model = xgb.XGBRegressor(tree_method="hist", enable_categorical=True, eval_metric=mean_absolute_error)
-model.load_model('housing_price.json')
+model.load_model('model/housing_price.json')
 
 results = model.predict(test_data)
 results = pd.concat((ids, pd.DataFrame(results, columns=["SalePrice"])), axis=1)
-results.to_csv("submission.csv", index=False)
+results.to_csv("data/submission.csv", index=False)
