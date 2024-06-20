@@ -1,7 +1,12 @@
 # Housing-Prices
-Housing price regression using kaggle house prices dataset.
+Housing price regression using kaggle's [house prices dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques).
 
-## data setup
+## Installation
+```
+conda env create -f environment.yml
+```
+
+## Data setup
 With 7z:
 ```
 cd data
@@ -13,3 +18,16 @@ With unzip:
 cd data
 unzip house-prices-advanced-regression-techniques.zip
 ```
+
+## Train
+```
+python train.py
+```
+
+## Test (create kaggle submission)
+```
+python test.py
+```
+
+## Look at the data
+Run the cells in data_exploration.ipynb!
